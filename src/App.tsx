@@ -66,90 +66,55 @@ function App() {
 
       {/* Hero Section */}
       <section 
-  className={`min-h-screen pt-16 transition-opacity duration-1000 bg-cover bg-center relative ${isVisible ? 'opacity-100' : 'opacity-0'}`} 
-  style={{ backgroundImage: "url('./bg.jpg')" }} // <-- Mets ici ton image de fond liée au dev
+  className={`pt-16 transition-opacity duration-1000 bg-cover bg-center relative ${isVisible ? 'opacity-100' : 'opacity-0'}`} 
+  style={{ backgroundImage: "url('./bg.jpg')" }}
 >
-  {/* Overlay foncé pour bien faire ressortir le contenu */}
+  {/* Overlay */}
   <div className="absolute inset-0 bg-black/30"></div>
 
-  <div className="relative container mx-auto px-6 h-[calc(100vh-4rem)] flex items-center">
-    <div className="grid md:grid-cols-2 gap-12 w-full items-center">
-
-      {/* Text Content */}
-      <div className="space-y-8 text-white">
-        <h1 className="text-5xl font-extrabold leading-tight">
-          Jemima Mukanza
-          <span className="block text-2xl text-blue-300 mt-3">Full Stack Developer</span>
-        </h1>
-        <p className="text-lg max-w-md text-blue-100">
-          Crafting beautiful and functional web experiences with passion and precision.
-        </p>
-        <div className="flex gap-4 flex-wrap">
-          <a 
-            href="#contact" 
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center gap-2"
-          >
-            <Mail className="w-5 h-5" />
-            Contact Me
-          </a>
-          <a 
-            href="./cv.pdf" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="border border-blue-300 text-blue-300 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors inline-flex items-center gap-2"
-          >
-            <Download className="w-5 h-5" />
-            Download CV
-          </a>
-        </div>
+  <div className="relative container mx-auto px-6 py-10 md:min-h-screen flex flex-col md:flex-row items-center justify-center gap-12">
+    
+    {/* Texte */}
+    <div className="text-white space-y-8 md:w-1/2 text-center md:text-left">
+      <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight">
+        Jemima Mukanza
+        <span className="block text-2xl text-blue-300 mt-3">Full Stack Developer</span>
+      </h1>
+      <p className="text-lg max-w-md text-blue-100 mx-auto md:mx-0">
+        Crafting beautiful and functional web experiences with passion and precision.
+      </p>
+      <div className="flex gap-4 flex-wrap justify-center md:justify-start">
+        <a 
+          href="#contact" 
+          className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors inline-flex items-center gap-2"
+        >
+          <Mail className="w-5 h-5" />
+          Contact Me
+        </a>
+        <a 
+          href="./cv.pdf" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="border border-blue-300 text-blue-300 px-6 py-3 rounded-lg hover:bg-blue-50 transition-colors inline-flex items-center gap-2"
+        >
+          <Download className="w-5 h-5" />
+          Download CV
+        </a>
       </div>
-
-      {/* Profile Image */}
-      <div className="relative group">
-        <img 
-          src="./me.jpeg" 
-          alt="Profile" 
-          className="rounded-full w-80 h-80 object-cover mx-auto border-8 border-white shadow-2xl transform group-hover:scale-105 transition-transform duration-700"
-        />
-        <div className="absolute inset-0 bg-blue-400 opacity-20 rounded-full blur-3xl scale-110 -z-10"></div>
-      </div>
-
     </div>
+
+    {/* Image */}
+    <div className="relative group md:w-1/2">
+      <img 
+        src="./me.jpeg" 
+        alt="Profile" 
+        className="rounded-full w-48 h-48 sm:w-60 sm:h-60 md:w-80 md:h-80 object-cover mx-auto border-8 border-white shadow-2xl transform group-hover:scale-105 transition-transform duration-700"
+      />
+      <div className="absolute inset-0 bg-blue-400 opacity-20 rounded-full blur-3xl scale-110 -z-10"></div>
+    </div>
+    
   </div>
 </section>
-
-
-      {/* About Section */}
-      <section id="about" className="py-20 bg-blue-50">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-blue-900 mb-12 text-center">About Me</h2>
-          <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-blue-700 mb-6">
-              With over 5 years of experience in web development, I specialize in creating responsive and user-friendly applications. My journey in tech started with a passion for solving problems and has evolved into a career focused on delivering exceptional digital experiences.
-            </p>
-            <p className="text-lg text-blue-700 mb-6">
-              I believe in writing clean, maintainable code and staying up-to-date with the latest technologies and best practices in web development.
-            </p>
-            <div className="grid md:grid-cols-3 gap-6 mt-12">
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <User className="w-8 h-8 text-blue-500 mb-4" />
-                <h3 className="text-xl font-semibold text-blue-900 mb-2">Background</h3>
-                <p className="text-blue-700">Computer Science graduate with a focus on web technologies</p>
-              </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <Heart className="w-8 h-8 text-blue-500 mb-4" />
-                <h3 className="text-xl font-semibold text-blue-900 mb-2">Passion</h3>
-                <p className="text-blue-700">Dedicated to creating intuitive and accessible web experiences</p>
-              </div>
-              <div className="bg-white p-6 rounded-xl shadow-lg">
-                <Star className="w-8 h-8 text-blue-500 mb-4" />
-                <h3 className="text-xl font-semibold text-blue-900 mb-2">Goal</h3>
-                <p className="text-blue-700">Committed to delivering high-quality solutions that exceed expectations</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Skills Section */}
       <section id="skills" className="py-20 bg-white">
@@ -163,7 +128,9 @@ function App() {
                   { name: 'React/Next.js', level: 90 },
                   { name: 'TypeScript', level: 85 },
                   { name: 'Node.js', level: 80 },
+                  {name:'Adonis.js', level:80},
                   { name: 'SQL/NoSQL', level: 75 },
+                  
                 ].map((skill) => (
                   <div key={skill.name}>
                     <div className="flex justify-between mb-1">
