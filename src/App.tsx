@@ -175,17 +175,37 @@ function App() {
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {[
               {
-                title: 'E-commerce Platform',
-                description: 'A full-featured online store with real-time inventory management',
-                tech: ['React', 'Node.js', 'MongoDB'],
-                image: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&w=600&h=400'
+                title: 'journees informatiques',
+                description: 'A dynamic event platform showcasing tech innovations, conferences, and workshops during the Computer Science Days.',
+                tech: ['html', 'espress','Tailwind.css'],
+                image: './JI.png',
+                link: '/projects/journees-informatiques',
+                status: 'Completed'
               },
               {
                 title: 'Task Management App',
                 description: 'Collaborative project management tool with real-time updates',
                 tech: ['Next.js', 'TypeScript', 'PostgreSQL'],
-                image: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&w=600&h=400'
-              }
+                image: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&w=600&h=400',
+                link: '/projects/journees-informatiques',
+                status: 'In Progress' // ou 'Completed'
+              },
+              {
+                title: 'solution of safety',
+                description: 'A full-featured online store with real-time inventory management',
+                tech: ['React', 'tsilwind.css'],
+                image: './s&s.png',
+                link: '',
+                status: 'In Progress' // ou 'Completed'
+              },
+              {
+                title: 'Dream House',
+                description: 'Discover and manage real estate properties effortlessly with Dream House – your smart solution for buying, selling, and renting homes in the DRC.',
+                tech: ['React', 'Adonis.js', 'Postgres'],
+                image: './DreamHouse.jpeg',
+                link: 'https://jemimamukanzaportfolio.vercel.app/',
+                status: 'In Progress' // ou 'Completed'
+              },
             ].map((project, index) => (
               <div key={index} className="group bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="relative overflow-hidden">
@@ -206,12 +226,19 @@ function App() {
                       </span>
                     ))}
                   </div>
-                  <a 
-                    href="#" 
-                    className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
-                  >
+                  <div className='flex justify-between align-middle items-center'>
+                  <p className="text-sm text-gray-500 font-medium mb-2">
+                    Status: <span className={project.status === 'Completed' ? 'text-green-600' : 'text-yellow-600'}>
+                    {project.status}
+                    </span>
+                  </p>
+                  <a href={project.link}
+                    className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors">
                     View Project <Code2 className="w-4 h-4 ml-2" />
                   </a>
+
+                  </div>
+                  
                 </div>
               </div>
             ))}
