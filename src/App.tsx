@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Code2, Briefcase, Mail, Github, Linkedin, Twitter, Menu, X, Download, GraduationCap as Graduation, Star, User, MessageSquare, BookOpen, Award, Heart } from 'lucide-react';
+import { Code2, Briefcase, Mail, Github, Linkedin, Menu, X, Download, GraduationCap as Graduation,MessageSquare, BookOpen, Award } from 'lucide-react';
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,13 +29,11 @@ function App() {
               <a href="#contact" className="text-blue-600 hover:text-blue-800 transition-colors">Contact</a>
               
               <div className="flex items-center space-x-4 ml-8 border-l border-blue-100 pl-8">
-                <a href="#" className="text-blue-500 hover:text-blue-700 transition-colors">
-                  <Twitter className="w-5 h-5" />
-                </a>
-                <a href="#" className="text-blue-500 hover:text-blue-700 transition-colors">
+                
+                <a href="https://www.linkedin.com/in/jemima-mukanza-527542273/" target="_blank" rel="noopener noreferrer"  className="text-blue-500 hover:text-blue-700 transition-colors">
                   <Linkedin className="w-5 h-5" />
                 </a>
-                <a href="#" className="text-blue-500 hover:text-blue-700 transition-colors">
+                <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="text-blue-500  hover:text-blue-700 transition-colors">
                   <Github className="w-5 h-5" />
                 </a>
               </div>
@@ -75,7 +73,7 @@ function App() {
   <div className="relative container mx-auto px-6 py-10 md:min-h-screen flex flex-col md:flex-row items-center justify-center gap-12">
     
     {/* Texte */}
-    <div className="text-white space-y-8 md:w-1/2 text-center md:text-left">
+    <div  className="text-white space-y-8 md:w-1/2 text-center md:text-left">
       <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight">
         Jemima Mukanza
         <span className="block text-2xl text-blue-300 mt-3">Full Stack Developer</span>
@@ -128,7 +126,8 @@ function App() {
                   { name: 'React/Next.js', level: 90 },
                   { name: 'TypeScript', level: 85 },
                   { name: 'Node.js', level: 80 },
-                  {name:'Adonis.js', level:80},
+                  {name:'Adonis.js', level: 80},
+                  {name:'python', level:70 },
                   { name: 'SQL/NoSQL', level: 75 },
                   
                 ].map((skill) => (
@@ -177,25 +176,25 @@ function App() {
               {
                 title: 'journees informatiques',
                 description: 'A dynamic event platform showcasing tech innovations, conferences, and workshops during the Computer Science Days.',
-                tech: ['html', 'espress','Tailwind.css'],
+                tech: ['html', 'express','Tailwind.css'],
                 image: './JI.png',
-                link: '/projects/journees-informatiques',
+                link: 'https://journeesinformatiques.onrender.com/',
                 status: 'Completed'
               },
               {
-                title: 'Task Management App',
-                description: 'Collaborative project management tool with real-time updates',
-                tech: ['Next.js', 'TypeScript', 'PostgreSQL'],
-                image: 'https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&w=600&h=400',
-                link: '/projects/journees-informatiques',
+                title: 'My Portfolio',
+                description: 'A sleek and responsive personal portfolio showcasing my web development projects and skills.',
+                tech: ['React.js','Tailwind', 'TypeScript'],
+                image: './portfolio.png',
+                link: './',
                 status: 'In Progress' // ou 'Completed'
               },
               {
                 title: 'solution of safety',
                 description: 'A full-featured online store with real-time inventory management',
-                tech: ['React', 'tsilwind.css'],
+                tech: ['React','TypeScript', 'tailwind.css'],
                 image: './s&s.png',
-                link: '',
+                link: 'https://projet-entreprise-solutions-for-safety-consulting.vercel.app/',
                 status: 'In Progress' // ou 'Completed'
               },
               {
@@ -203,7 +202,7 @@ function App() {
                 description: 'Discover and manage real estate properties effortlessly with Dream House – your smart solution for buying, selling, and renting homes in the DRC.',
                 tech: ['React', 'Adonis.js', 'Postgres'],
                 image: './DreamHouse.jpeg',
-                link: 'https://jemimamukanzaportfolio.vercel.app/',
+                link: 'https://dream-house-front.vercel.app/',
                 status: 'In Progress' // ou 'Completed'
               },
             ].map((project, index) => (
@@ -256,10 +255,10 @@ function App() {
                 <div className="flex items-start gap-4">
                   <Briefcase className="w-6 h-6 text-blue-500 mt-1" />
                   <div>
-                    <h3 className="text-xl font-semibold text-blue-900">Senior Full Stack Developer</h3>
-                    <p className="text-blue-600">Tech Solutions Inc. • 2020 - Present</p>
+                    <h3 className="text-xl font-semibold text-blue-900">junior Full Stack Developer</h3>
+                    <p className="text-blue-600">Tech Solutions Inc. • 2023 - Present</p>
                     <p className="text-blue-700 mt-2">
-                      Led development of enterprise web applications, mentored junior developers, and implemented CI/CD pipelines.
+                      Contributed to the development of web applications, collaborated with the team to solve coding challenges, and learned about CI/CD practices.
                     </p>
                   </div>
                 </div>
@@ -269,8 +268,8 @@ function App() {
                 <div className="flex items-start gap-4">
                   <Graduation className="w-6 h-6 text-blue-500 mt-1" />
                   <div>
-                    <h3 className="text-xl font-semibold text-blue-900">MSc in Computer Science</h3>
-                    <p className="text-blue-600">Tech University • 2018 - 2020</p>
+                    <h3 className="text-xl font-semibold text-blue-900">BSc in Management Information Systems (MIS)</h3>
+                    <p className="text-blue-600">Tech University • 2018 – 2022</p>
                     <p className="text-blue-700 mt-2">
                       Specialized in Web Technologies and Distributed Systems.
                     </p>
@@ -283,8 +282,8 @@ function App() {
               <h3 className="text-xl font-semibold text-blue-900 mb-6">Certifications</h3>
               <div className="grid md:grid-cols-2 gap-4">
                 {[
-                  { name: 'AWS Certified Developer', date: '2023' },
-                  { name: 'Google Cloud Professional', date: '2022' }
+                  { name: 'Full-Stack Web Developer Certificate', date: 'Kadea Academy 2024' },
+                  
                 ].map((cert) => (
                   <div key={cert.name} className="flex items-center gap-3 bg-blue-50 p-4 rounded-lg">
                     <Award className="w-5 h-5 text-blue-500" />
@@ -307,15 +306,15 @@ function App() {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {[
               {
-                text: "John's technical expertise and problem-solving skills are exceptional. He consistently delivers high-quality solutions.",
-                author: "Sarah Johnson",
-                position: "Project Manager"
+                text: "Working with jemima was a great experience. His attention to detail and commitment to quality are outstanding.",
+                author: "Neville Minorman",
+                position: "full stack developper"
+              },{
+                text: "Collaborating with Jemima was seamless and productive. She consistently delivered high-quality work ahead of schedule.",
+                author: "Abmak",
+                position: "UI/UX Designer"
               },
-              {
-                text: "Working with John was a great experience. His attention to detail and commitment to quality are outstanding.",
-                author: "Mike Chen",
-                position: "Tech Lead"
-              }
+            
             ].map((testimonial, index) => (
               <div key={index} className="bg-white p-6 rounded-xl shadow-lg">
                 <MessageSquare className="w-8 h-8 text-blue-500 mb-4" />
@@ -331,26 +330,22 @@ function App() {
       </section>
 
       {/* Blog Section */}
-      <section id="blog" className="py-20 bg-white">
+      <section id="blog" className=" hidden py-20 bg-white">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-blue-900 mb-12 text-center">Latest Articles</h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {[
-              {
-                title: "The Future of Web Development",
-                excerpt: "Exploring upcoming trends and technologies in web development",
-                date: "Mar 15, 2024"
-              },
-              {
-                title: "Optimizing React Performance",
-                excerpt: "Best practices for building fast and efficient React applications",
-                date: "Mar 10, 2024"
+             {
+                title: "The Rise of Progressive Web Apps",
+                excerpt: "Understanding how PWAs are transforming the modern web experience",
+                date: "Apr 2, 2025"
               },
               {
                 title: "Modern CSS Techniques",
                 excerpt: "Advanced CSS features and their practical applications",
                 date: "Mar 5, 2024"
               }
+
             ].map((post, index) => (
               <div key={index} className="bg-blue-50 rounded-xl overflow-hidden group hover:shadow-lg transition-all duration-300">
                 <div className="p-6">
